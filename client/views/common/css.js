@@ -33,7 +33,8 @@ Template[getTemplate('css')].helpers({
     var selectors = [
       {name: 'email', selector: ".at-pwd-form"},
       {name: 'twitter', selector: "#at-twitter"},
-      {name: 'facebook', selector: "#at-facebook"}
+      {name: 'facebook', selector: "#at-facebook"},
+      {name: 'google', selector: '#at-google'}
     ];
     selectors.forEach(function (method) {
       // if current method is not one of the enabled auth methods, hide it
@@ -44,7 +45,7 @@ Template[getTemplate('css')].helpers({
 
     // unless we're showing at least one of twitter and facebook AND the password form,
     // hide separator
-    if (authMethods.indexOf('email') == -1 || (authMethods.indexOf('facebook') == -1 && authMethods.indexOf('twitter') == -1)) {
+    if (authMethods.indexOf('email') == -1 || (authMethods.indexOf('facebook') == -1 && authMethods.indexOf('twitter') == -1) || authMethods.indexOf('google') == -1) {
       authClass += ".at-sep, ";
     }
 

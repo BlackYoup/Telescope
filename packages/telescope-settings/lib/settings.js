@@ -393,6 +393,10 @@ Settings.schema = new SimpleSchema({
         {
           value: 'facebook',
           label: 'Facebook'
+        },
+        {
+          value: 'google',
+          label: 'Google'
         }
       ],
       instructions: 'Authentication methods (default to email only)'
